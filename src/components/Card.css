@@ -1,0 +1,221 @@
+.card {
+    font-family: "Trebuchet MS", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card_wrapper {
+    position: relative;
+    min-height: 480px;
+    min-width: 320px;
+    background: linear-gradient(135deg, transparent 31px, #1698d9 31px);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 29px auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card_wrapper:hover {
+    background: linear-gradient(135deg, transparent 31px, #2ea8e6 31px);
+}
+
+.card__disabled .card_wrapper {
+    background: linear-gradient(135deg, transparent 31px, #b3b3b3 31px);
+    cursor: default;
+}
+
+.card__selected .card_wrapper {
+    background: linear-gradient(135deg, transparent 31px, #d91667 31px);
+}
+
+.card__selected:not(.card__clicked) .card_wrapper:hover {
+    background: linear-gradient(135deg, transparent 31px, #e62e7a 31px);
+}
+
+.card_wrapper:after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: linear-gradient(135deg, transparent 30px, #f2f2f2 30px);
+    border-radius: 8px;
+}
+
+.card_type {
+    z-index: 2;
+    margin-top: 21px;
+    font-size: 16px;
+    margin-left: 50px;
+    color: #666666;
+    font-weight: 200;
+}
+
+.card_type-normal {
+    position: absolute;
+    opacity: 1;
+}
+
+.card_type-confirm {
+    color: #e62e7a;
+    opacity: 0;
+}
+
+.card_type-normal,
+.card_type-confirm {
+    transition: opacity 0.2s linear;
+}
+
+
+.card__selected:not(.card__clicked) .card_wrapper:hover .card_type-confirm {
+    opacity: 1;
+}
+
+.card__selected:not(.card__clicked) .card_wrapper:hover .card_type-normal {
+    opacity: 0;
+}
+
+.card__disabled .card_type {
+    color: #b3b3b3;
+}
+
+.card_title {
+    z-index: 2;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-top: 8px;
+    margin-left: 48px;
+}
+
+.card__disabled .card_title {
+    color: #b3b3b3;
+}
+
+.card_subtitle {
+    z-index: 2;
+    margin-left: 50px;
+    margin-top: 1px;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+}
+
+.card__disabled .card_subtitle {
+    color: #b3b3b3;
+}
+
+.card_portions-number {
+    z-index: 2;
+    margin-left: 51px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0.02em;
+}
+
+.card__disabled .card_portions-number {
+    color: #b3b3b3;
+}
+
+.card_note {
+    z-index: 2;
+    margin-left: 51px;
+    font-size: 14px;
+    max-width: 170px;
+    color: #666666;
+}
+
+.card__disabled .card_note {
+    color: #b3b3b3;
+}
+
+.card_image {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: url("../images/Photo.png");
+    height: 268px;
+    width: calc(100% - 8px);
+    border-radius: 8px;
+    z-index: 1;
+    background-position: -4px 0;
+}
+
+.card__disabled .card_image {
+    opacity: 0.5;
+}
+
+.card_weight {
+    z-index: 2;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: #1698d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.card__selected .card_weight {
+    background-color: #d91667;
+}
+
+.card_wrapper:hover .card_weight {
+    background-color: #2ea8e6;
+}
+
+.card__selected .card_wrapper:hover .card_weight {
+    background-color: #e62e7a;
+}
+
+.card__disabled .card_weight {
+    background-color: #b3b3b3;
+}
+
+.card__disabled .card_wrapper:hover .card_weight {
+    background-color: #b3b3b3;
+}
+
+
+.card_weight-value {
+    font-size: 42px;
+    line-height: 22px;
+    margin-top: 21px;
+}
+
+.card_weight-units {
+    font-size: 21px;
+    line-height: 22px;
+    margin-top: 7px;
+}
+
+.card_slogan {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.card__disabled .card_slogan {
+    color: #ffff66;
+}
+
+
+.card_link {
+    color: #1698d9;
+}
+
+
+

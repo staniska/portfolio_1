@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.app {
+    font-family: "Exo 2", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), transparent, rgba(0, 0, 0, 0.4) ), url('./images/pattern.png') repeat;
+    background-size: 70px;
+
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-header {
+    display: flex;
+    min-height: 200px;
+    flex-direction: column;
+    justify-content: end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page-header_title {
+    text-align: center;
+    font-size: 36px;
+    margin-right: 5px;
+    margin-bottom: -6px;
+    color: #ffffff;
+    font-weight: 200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1280px;
+    gap: 80px;
+    padding: 0 80px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-device-width: 1280px) {
+    .content {
+        max-width: 1180px;
+        row-gap: 60px;
+        padding: 0 40px;
+    }
+    .page-header {
+        min-height: 150px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-device-width: 800px) {
+    .content {
+        max-width: 700px;
+        row-gap: 40px;
+    }
+    .page-header {
+        min-height: 100px;
+    }
 }
+
+
+
+
+
+
+
+
